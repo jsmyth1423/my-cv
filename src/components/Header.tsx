@@ -104,9 +104,9 @@ const Header: React.FC<HeaderProps> = ({ name, tagline }) => {
             variant="outline"
             borderColor="white"
             color="white"
-            _hover={{transform: "scale(1.1)"}}
-            py="3"
-            px="8"
+            _hover={{ transform: "scale(1.1)" }}
+            py="4"
+            px="4"
             rounded="full"
             fontSize="lg"
             fontWeight="semibold"

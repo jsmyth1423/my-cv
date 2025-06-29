@@ -30,7 +30,7 @@ const ChevronDown: React.FC<ChevronDownProps> = ({ textContent, href }) => {
   return (
     <>
       <Box
-        mt="6"
+        mt="12"
         mb="4"
         display="flex"
         flexDirection="column"

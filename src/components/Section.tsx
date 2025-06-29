@@ -38,6 +38,7 @@ const Section: React.FC<SectionProps> = ({ id, title, children, bg, color, bgGra
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       alignItems="center"
+      mb="4"
     >
       <Box maxWidth="4xl" mx="auto" px={{ base: "4", md: "8" }} flex="1">
         <Heading
