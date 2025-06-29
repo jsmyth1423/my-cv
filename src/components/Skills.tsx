@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Heading, Text, Flex, Tag, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Tag, Tooltip } from "@chakra-ui/react";
 import React from 'react';
 import Section from "./Section";
 import { Skill } from "@/types/cv";
@@ -49,21 +49,34 @@ const Skills: React.FC<SkillsProps> = ({ skills, bgGradient, color, position, ov
         </Text>
         <Flex wrap="wrap" justify="center" gap="4">
           {skills.map((skill) => (
-            <Tag
+
+            <Tooltip
               key={skill.name}
-              size={{ base: "md", md: "lg" }}
-              borderRadius="full"
-              variant="solid"
-              colorScheme={categoryColorMap[skill.category] || "gray"}
-              px={{ base: "3", md: "4" }}
-              py={{ base: "1.5", md: "2" }}
-              cursor="default"
-              shadow="sm"
-              _hover={{ shadow: "md", transform: "scale(1.02)" }}
-              transition="all 0.2s ease-in-out"
+              label={skill.description}
+              placement="top"
+              hasArrow
+              bg="whiteAlpha.900"
+              color="gray.800"
+              borderRadius="md"
+              px="3"
+              py="1.5"
+              fontSize="sm"
             >
-              <Text fontSize="md" fontWeight="medium">{skill.name}</Text>
-            </Tag>
+              <Tag
+                size={{ base: "md", md: "lg" }}
+                borderRadius="full"
+                variant="solid"
+                colorScheme={categoryColorMap[skill.category] || "gray"}
+                px={{ base: "3", md: "4" }}
+                py={{ base: "1.5", md: "2" }}
+                cursor="help"
+                shadow="sm"
+                _hover={{ shadow: "md", transform: "scale(1.02)" }}
+                transition="all 0.2s ease-in-out"
+              >
+                <Text fontSize="md" fontWeight="medium">{skill.name}</Text>
+              </Tag>
+            </Tooltip>
           ))}
         </Flex>
         <Box mt="12" textAlign="center">
