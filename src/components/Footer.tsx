@@ -3,7 +3,7 @@
 import { Box, Text, Flex, Link as ChakraLink, VStack, Heading } from "@chakra-ui/react";
 import React from 'react';
 import NextLink from "next/link";
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import { CVData } from "@/types/cv";
 
 interface FooterProps {
@@ -17,9 +17,9 @@ const Footer: React.FC<FooterProps> = ({ contact }) => {
     <Box
       id="footer"
       as="footer"
-      bg="gray.950" 
-      color="gray.200" 
-      py="10" 
+      bg="gray.950"
+      color="gray.200"
+      py="10"
       textAlign="center"
       position="relative"
       overflow="hidden"
@@ -44,27 +44,28 @@ const Footer: React.FC<FooterProps> = ({ contact }) => {
         </Text>
 
 
-        <Flex gap="6" my="4"> 
+        <Flex gap="6" my="4">
           <ChakraLink
             as={NextLink}
-            href={`mailto:${contact.email}`}
+            href="/Jordan_Smyth_CV.pdf"
+            download="Jordan_Smyth_CV.pdf"
             isExternal
-            fontSize="4xl" 
-            color="gray.200" 
-            _hover={{ color: "purple.300", transform: "scale(1.1)" }} 
+            fontSize="4xl"
+            color="gray.200"
+            _hover={{ color: "purple.300", transform: "scale(1.1)" }}
             transition="all 0.2s ease-in-out"
-            aria-label="Email"
+            aria-label="CV"
           >
-            <FaEnvelope />
+            <FaFilePdf />
           </ChakraLink>
           <ChakraLink
             as={NextLink}
             href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            fontSize="4xl" 
-            color="gray.200" 
-            _hover={{ color: "blue.300", transform: "scale(1.1)" }} 
+            fontSize="4xl"
+            color="gray.200"
+            _hover={{ color: "blue.300", transform: "scale(1.1)" }}
             transition="all 0.2s ease-in-out"
             aria-label="LinkedIn"
           >
@@ -75,9 +76,9 @@ const Footer: React.FC<FooterProps> = ({ contact }) => {
             href={contact.github}
             target="_blank"
             rel="noopener noreferrer"
-            fontSize="4xl" 
+            fontSize="4xl"
             color="gray.200"
-            _hover={{ color: "gray.400", transform: "scale(1.1)" }} 
+            _hover={{ color: "gray.400", transform: "scale(1.1)" }}
             transition="all 0.2s ease-in-out"
             aria-label="GitHub"
           >
@@ -86,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({ contact }) => {
         </Flex>
 
 
-        <Text fontSize="md" color="gray.400" mb="6"> 
+        <Text fontSize="md" color="gray.400" mb="6">
           Or send me an email directly at:{" "}
           <ChakraLink href={`mailto:${contact.email}`} color="purple.300" _hover={{ textDecoration: "underline" }}>
             {contact.email}
