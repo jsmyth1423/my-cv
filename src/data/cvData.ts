@@ -89,7 +89,7 @@ const cvData: CVData = {
       role: "Community Manager - Freelance",
       dates: "Jan 2021 - Present",
       description: [
-        "Scaled a small community into one of the largest on its platform, growing membership to over 400k users.",
+        "Scaled a small community into one of the largest on its platform, growing membership from just a few hundred to over 400 thousand users.",
         "Managed day-to-day operations and set standards for a large support team, ensuring consistent, professional user interactions.",
         "Actively engaged with the player base to identify user needs, gather feedback, and relay actionable insights to product and development teams.",
         "Delivered on-demand consultancy services to game developers, including UX feedback, feature suggestions, and live operational support.",
